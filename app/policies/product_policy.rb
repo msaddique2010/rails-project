@@ -8,7 +8,7 @@ class ProductPolicy < ApplicationPolicy
   end
 
   def create?
-    user&.admin?
+    user.has_role?(:admin)
   end
 
   def new?
@@ -16,7 +16,7 @@ class ProductPolicy < ApplicationPolicy
   end
 
   def update?
-    user&.admin?
+    user.has_role?(:admin)
   end
 
   def edit?
@@ -24,12 +24,12 @@ class ProductPolicy < ApplicationPolicy
   end
 
   def destroy?
-    user&.admin?
+    user.has_role?(:admin)
   end
 
   class Scope < Scope
     def resolve
-      if user&.admin?
+      if user.has_role?(:admin)
         scope.all
       else
         scope.where(user_id: user.id)  # or scope.where(published: true) if needed

@@ -17,11 +17,13 @@ gem "stimulus-rails"
 # Build JSON APIs with ease [https://github.com/rails/jbuilder]
 gem "jbuilder"
 
-gem "devise"
+gem "devise"  # Devise is used to add authentication
 
-# gem "cancancan"
+# gem "cancancan" # Cancancan is used to authorizaton at beginner level
 
-gem "pundit"
+gem "pundit"  # Pundit is used to add authorization at adavnce level
+
+gem "rolify"  # Rolify is used to Assign different roles to the user 
 
 # Use Active Model has_secure_password [https://guides.rubyonrails.org/active_model_basics.html#securepassword]
 # gem "bcrypt", "~> 3.1.7"
