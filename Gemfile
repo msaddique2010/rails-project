@@ -19,7 +19,7 @@ gem "jbuilder"
 
 gem "devise"
 
-gem "cancancan"
+# gem "cancancan"
 
 gem "pundit"
 
