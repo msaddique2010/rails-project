@@ -1,5 +1,4 @@
 class ProductsController < ApplicationController
-  
   # load_and_authorize_resource
   before_action :set_product, only: %i[ show edit update destroy ]
   before_action :authenticate_user!, only: %i[ new show edit update destroy ]

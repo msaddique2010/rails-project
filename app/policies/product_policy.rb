@@ -27,12 +27,12 @@ class ProductPolicy < ApplicationPolicy
     user&.admin?
   end
 
-  class Scope < ApplicationPolicy::Scope
+  class Scope < Scope
     def resolve
       if user&.admin?
         scope.all
       else
-        scope.all  # or scope.where(published: true) if needed
+        scope.where(user_id: user.id)  # or scope.where(published: true) if needed
       end
     end
   end
