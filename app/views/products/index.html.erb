@@ -2,15 +2,24 @@
 
 <% content_for :title, "Products" %>
 
-<h1>Products</h1>
+<h1 style="display: inline;">Products</h1>
+<span>
+  <%= link_to "New product", new_product_path, class: "new-product"%>
+</span>
 
-<div id="products">
-  <% @products.each do |product| %>
-    <%= render product %>
-    <p>
-      <%= link_to "Show this product", product %>
-    </p>
-  <% end %>
+<br><br>
+<div id="products" class="product-container">
+  <% @products.each do |product|  %>
+    <div class="product-card">
+      <%= render product %>
+      <%= link_to "Show this product", product %> 
+    </div>
+  <% end  %>
 </div>
 
-<%= link_to "New product", new_product_path %>
+<br><br>
+<div style="width: 100%;">
+  <div style="display: flex; justify-content: center;">
+    <%== pagy_bootstrap_nav(@pagy)%>
+  </div>
+</div>

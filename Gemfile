@@ -23,6 +23,8 @@ gem "devise"  # Devise is used to add authentication
 
 gem "pundit"  # Pundit is used to add authorization at adavnce level
 
+gem "pagy"
+
 gem "rolify"  # Rolify is used to Assign different roles to the user 
 
 # Use Active Model has_secure_password [https://guides.rubyonrails.org/active_model_basics.html#securepassword]

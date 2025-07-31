@@ -13,7 +13,7 @@ class ApplicationPolicy
   end
 
   def show?
-    false
+    falsex
   end
 
   def create?

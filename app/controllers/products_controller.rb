@@ -5,7 +5,8 @@ class ProductsController < ApplicationController
 
   # GET /products or /products.json
   def index
-    @products = Product.all
+    @pagy, @products = pagy(Product.all)
+    # @products = Product.all
     authorize Product
   end
 
