@@ -25,8 +25,7 @@ gem "pundit"  # Pundit is used to add authorization at adavnce level
 
 gem "pagy"
 
-gem "rolify"  # Rolify is used to Assign different roles to the user 
-
+gem "rolify"  # Rolify is used to Assign different roles to the user
 # Use Active Model has_secure_password [https://guides.rubyonrails.org/active_model_basics.html#securepassword]
 # gem "bcrypt", "~> 3.1.7"
 
