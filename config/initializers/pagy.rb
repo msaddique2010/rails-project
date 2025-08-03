@@ -1,3 +1,3 @@
-# config/initializers/pagy.rb
 require "pagy/extras/bootstrap"
-Pagy::DEFAULT[:limit] = 12
+Pagy::DEFAULT[:limit] = 9
+Pagy::DEFAULT[:size] = 3
